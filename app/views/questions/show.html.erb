@@ -1,0 +1,8 @@
+<h2>Test: <%= @question.test.title%></h2>
+<h2>Body:</h2>
+
+<p><%= @question.body%></p>
+
+<p> <%= link_to 'Back', test_path(@question.test)%></p>
+
+ <p> <%= link_to 'Home', tests_path%></p>
