@@ -1,0 +1,10 @@
+<h1>Test result: <%= @test_passage.test.title%></h1>
+
+  <h1>Number of correct answers:<%= @test_passage.correct_questions%></h1>
+ <% if @test_passage.test_passed_successfully?%>
+    <p style= "color:green">Test passed successfully:<%= @test_passage.percentage_score%></p>
+ <%else%>
+   <p style= "color:red">Test failed:<%= @test_passage.percentage_score%></p>
+ <%end%>
+
+<p><%= link_to 'All tests', tests_path%></p>
