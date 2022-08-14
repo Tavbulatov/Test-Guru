@@ -3,9 +3,9 @@
 class TestPassage < ApplicationRecord
   belongs_to :user
   belongs_to :test
-  belongs_to :current_question, class_name: 'Question'
+  belongs_to :current_question, class_name: 'Question', optional: true
 
-  before_validation :before_validation_set_current_question, on: :create
+  before_validation :before_validation_set_current_question
 
   SUCCESS_RATIO = 85
 
@@ -15,15 +15,14 @@ class TestPassage < ApplicationRecord
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
-    next_question
-    save
+    save!
   end
 
   def percentage_score
     self.correct_questions.to_f / test.questions.count * 100
   end
 
-  def evaluation_comparison
+  def test_passed_successfully?
     percentage_score >= SUCCESS_RATIO
   end
 
@@ -38,7 +37,7 @@ class TestPassage < ApplicationRecord
   end
 
   def correct_answer?(answer_ids)
-    correct_answers.ids.sort == answer_ids.map(&:to_i).sort unless answer_ids.nil?
+    correct_answers.ids.sort == answer_ids.to_a.map(&:to_i).sort
   end
 
   def correct_answers

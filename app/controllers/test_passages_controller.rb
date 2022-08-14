@@ -6,7 +6,6 @@ class TestPassagesController < ApplicationController
   def show; end
 
   def result
-    @test_passage.correct_questions
   end
 
   def update
