@@ -6,7 +6,9 @@ class User < ApplicationRecord
   has_many :created_tests, class_name: 'Test', foreign_key: 'author_id', dependent: :destroy
 
   validates :name, presence: true
-  validates :email, presence: true
+  validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
+
+  has_secure_password
 
   def tests_by_level_title(level_name)
     tests.where(level: level_name)

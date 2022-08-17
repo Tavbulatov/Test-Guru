@@ -8,4 +8,17 @@ module ApplicationHelper
   def github_url(author, repo)
     link_to 'Repository', "https://github.com/#{author}/#{repo}", target: '_blank'
   end
+
+  def flash_message(key)
+    case key.to_sym
+    when :notice then 'alert alert-info'
+    when :success then 'alert alert-success'
+    when :error then 'alert alert-error'
+    when :alert then 'alert alert-danger'
+    end
+  end
+
+  def project_link
+    link_to 'Test Guru', root_path
+  end
 end
