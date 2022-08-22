@@ -2,7 +2,6 @@
 <h2>Ответ к вопросу: "<%= @answer.body%>"</h2>
 
 <p>
-  <%= link_to 'Home', tests_path%> ||
   <%= link_to 'Back', question_path(@answer.question)%> ||
   <%= link_to 'Edit', edit_answer_path(@answer) %>
 </p>

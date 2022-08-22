@@ -11,6 +11,20 @@
   </head>
 
   <body>
+    <% if logged_in?%>
+      <p>
+      <%= project_link%>
+      </p>
+
+      <p>
+        Welcom, <%= current_user.name.capitalize%> Guru. (<%= link_to 'Go out', logout_path, method: :delete%>)
+      </p>
+    <%else%>
+      <p><%= link_to 'Log in', login_path %> || <%= link_to 'Sig nup', signup_path %></p>
+    <%end%>
+  </body>
+
+  <body>
     <%= yield %>
     <%= render 'shared/footer'%>
   </body>
