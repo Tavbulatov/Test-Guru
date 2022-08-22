@@ -23,6 +23,8 @@ class SessionsController < ApplicationController
     redirect_to login_path
   end
 
+  private
+
   def destination_way_home_if_cookies_nil
     cookies.delete(:desired_url) || tests_path
   end
