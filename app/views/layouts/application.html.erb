@@ -15,7 +15,7 @@
       <p><%= project_link%></p>
 
       <p>
-        Welcom, <%= current_user.name.capitalize%> Guru. (<%= link_to 'Go out', destroy_user_session, method: :delete%>)
+        Welcom, <%= current_user.name.capitalize%> Guru. (<%= link_to 'Go out', destroy_user_session_path, method: :delete%>)
       </p>
     <%end%>
 

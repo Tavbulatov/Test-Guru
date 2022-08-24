@@ -23,7 +23,7 @@ Rails.application.configure do
   # config.require_master_key = true
 
   #Action mailer
-  config.action_mailer.default_url_options = { host: 'locahost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
