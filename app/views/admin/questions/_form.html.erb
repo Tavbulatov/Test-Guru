@@ -1,7 +1,7 @@
 <h1><%= question_header(@question)%></h1>
 <%= render 'shared/errors', resource: @question%>
 
-<%= form_with model: [@test, @question] do |form| %>
+<%= form_with model: [:admin, @test, @question] do |form| %>
 <p>
 <%= form.label :body %><br>
 <%= form.text_field :body %>
@@ -9,4 +9,4 @@
 <p><%= form.submit %></p>
 <%end%>
 
-<p><%= link_to 'Back', test_path(@question.test)%></p>
+<p><%= link_to 'Back', admin_test_path(@question.test)%></p>
