@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TestGuru</title>
+    <title>Admin Panel || TestGuru</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,24 +11,14 @@
   </head>
 
   <body>
-
-
     <% if user_signed_in?%>
-      <p><%= project_link%></p>
-
       <p>
-        <%if current_user.admin?%>
-          <%= link_to 'Space Admin', admin_tests_path%>
-        <%end%>
-      </p>
-
-      <p>
-        Welcom, <%= current_user.name.capitalize%> Guru. (<%= link_to 'Go out', destroy_user_session_path, method: :delete%>)
+        <%= link_to 'Home', admin_tests_path%> ||
+        <%= link_to 'Go out', destroy_user_session_path, method: :delete%>
       </p>
     <%end%>
 
     <%= render 'shared/flash'%>
     <%= yield %>
-    <%= render 'shared/footer'%>
   </body>
 </html>

@@ -1,31 +1,27 @@
 # frozen_string_literal: true
 
-class SessionsController < ApplicationController
-  skip_before_action :authenticate_user!
+class SessionsController < Devise::SessionsController
+  # before_action :configure_sign_in_params, only: [:create]
 
-  def new; end
+  # GET /resource/sign_in
+  # def new
+  #   super
+  # end
 
   def create
-    user = User.find_by(email: params[:email])
-
-    if user&.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to(destination_way_home_if_cookies_nil)
-    else
-      flash.now[:alert] = 'Login and password required'
-      render :new
-    end
+    super
+    flash[:notice] = "Hello #{current_user.name}"
   end
 
-  def destroy
-    session.delete(:user_id)
-    flash[:notice] = 'You are logged out'
-    redirect_to login_path
-  end
+  # DELETE /resource/sign_out
+  # def destroy
+  #   super
+  # end
 
-  private
+  # protected
 
-  def destination_way_home_if_cookies_nil
-    cookies.delete(:desired_url) || tests_path
-  end
+  # If you have extra params to permit, append them to the sanitizer.
+  # def configure_sign_in_params
+  #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
+  # end
 end

@@ -11,8 +11,7 @@
 categories = Category.create!([{ title: 'Математика' },
                                { title: 'Фармакология' }])
 
-users = User.create!([{ name: 'Алихан', email: 'asdasd@mail.ru' },
-                      { name: 'Салимхан', email: 'qweqwe@mail.ru' }])
+users = User.all
 
 tests = Test.create!([{ title: 'Сложение', category: categories[0], author: users[1] },
                       { title: 'Вычитание', level: 1, category: categories[0], author: users[1] },
@@ -58,8 +57,3 @@ answers = Answer.create!([{ body: '12', correct: true, question: questions[0] },
                           { body: 'Сироп', question: questions[6] },
                           { body: 'Гранулы', question: questions[6] },
                           { body: 'Р-р для В/В', question: questions[6] }])
-
-test_passages = TestPassage.create!([{ user: users[0], test: tests[0] },
-                                     { user: users[0], test: tests[1] },
-                                     { user: users[1], test: tests[2] },
-                                     { user: users[1], test: tests[3] }])
