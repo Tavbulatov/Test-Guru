@@ -94,3 +94,7 @@ en:
         header: "New answer"
       edit:
         header: "Editing answer"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test"

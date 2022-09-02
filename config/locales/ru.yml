@@ -93,3 +93,7 @@ ru:
         header: "Новый ответ"
       edit:
         header: "Редактирование ответа"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы только что прошли тест TestGuru"
