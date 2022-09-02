@@ -1,8 +1,8 @@
 <footer>
   <p>
-    Author: Alikhan ||
-    Year: <%= current_year%> ||
+    <%= t('.author')%>: Alikhan ||
+    <%= t('.year')%>: <%= current_year%> ||
     Github: <%= github_url('Tavbulatov', 'test-guru')%> ||
-    <%= link_to "Учебный проект в онлайн-школе Thinknetica", "https://thinknetica.com", target: "_blank"%>
+    <%= link_to t('.navigation'), "https://thinknetica.com", target: "_blank"%>
     </p>
 </footer>

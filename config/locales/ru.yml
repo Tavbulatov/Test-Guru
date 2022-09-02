@@ -1,0 +1,99 @@
+ru:
+  helpers:
+    submit:
+      test:
+        create: "Создать Тест"
+        update: "Обновить Тест"
+      question:
+        create: "Создать Вопрос"
+        update: "Обновить Вопрос"
+      answer:
+        create: "Создать Ответ"
+        update: "Обновить Ответ"
+
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+      question:
+        body: "Содержание"
+      answer:
+        body: "Содержание"
+    select:
+      prompt: "Выберите категорию"
+
+  delete:
+    message: "Ты уверен?"
+
+  nav:
+    show: "Показать"
+    edit: "Редактировать"
+    delete: "Удалить"
+    back: "Назад"
+    start: "Начать"
+    exit: "Выйти"
+    all_tests: "Все тесты"
+    new_answer: "Новый ответ"
+    new_question: "Новый вопрос"
+    new_test: "Новый тест"
+
+  tests:
+    index:
+      header: "Доступные Tесты"
+      title: "Название"
+      number_questions: "Количество вопросов"
+      action: "Действие"
+
+  shared:
+    footer:
+      author: "Автор"
+      year: "Год"
+      navigation: "Учебный проект в онлайн-школе Thinknetica"
+      repo: "Репозиторий"
+
+  test_passages:
+    show:
+      header: "Прохождение теста: %{test}"
+      count_questions: "Количество тестовых вопросов: %{quantity}"
+      number_question: "Номер текущего вопроса: %{question}"
+      next: "Следующий"
+    result:
+      header: "Результат прохождения теста: %{title}"
+      correct_count: "Количество правильных ответов: %{correct}"
+      passed: "Тест успешно пройден: %{score}"
+      not_passed: "Тест не пройден: %{score}"
+
+  admin:
+    tests:
+      index:
+        header: "Доступные Tесты"
+        title: "Название"
+        number_questions: "Количество вопросов"
+        action: "Действие"
+      show:
+        header: "Название: %{title}"
+        questions: "Вопросы"
+        action: "Действие"
+      new:
+        header: "Создать новый тест"
+      edit:
+        header: "Редактирование Теста: %{title}"
+
+    questions:
+      show:
+        header: "Ответы"
+        test_title: "Тест: %{title}"
+        body: "Содержание Вопроса: %{body}"
+    answers:
+      show:
+        question_body: "Вопрос: %{body}"
+        body: "Содержание Ответа: %{body}"
+      new:
+        header: "Новый ответ"
+      edit:
+        header: "Редактирование ответа"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы только что прошли тест TestGuru"
