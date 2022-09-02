@@ -6,7 +6,7 @@ class Test < ApplicationRecord
   has_many :users, through: :test_passages
 
   belongs_to :category
-  belongs_to :author, class_name: 'User', foreign_key: 'author_id'
+  belongs_to :author, class_name: 'User'
 
   validates :title, presence: true, uniqueness: true, length: { maximum: 100 }
   validates :level, uniqueness: true, numericality: { only_integer: true }

@@ -12,10 +12,10 @@ class ApplicationController < ActionController::Base
   end
 
   def default_url_options
-    I18n.default_locale == I18n.locale ? {} : {lang: I18n.locale}
+    I18n.default_locale == I18n.locale ? {} : { lang: I18n.locale }
   end
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :first_name])
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name first_name])
   end
 end
