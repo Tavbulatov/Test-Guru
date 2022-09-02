@@ -1,0 +1,42 @@
+ru:
+  activerecord:
+    models:
+      user: "User"
+      category: "Category"
+      test: "Test"
+      question: "Question"
+      answer: "Answer"
+
+    attributes:
+      user:
+        last_name: "Surname"
+        first_name: "Name"
+        email: "Email"
+        type: "Role"
+        created_at: "Date of creation "
+        updated_at: "Date edited"
+
+      category:
+        title: "Title"
+        created_at: "Date of creation "
+        updated_at: "Date edited"
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+        author_id: "Key user"
+        created_at: "Date of creation "
+        updated_at: "Date edited"
+
+      question:
+        body: "Body"
+        test_id: "Key test"
+        created_at: "Date of creation "
+        updated_at: "Date edited"
+
+      answer:
+        body: "Body"
+        correct: "Correct"
+        question_id: "Key question"
+        created_at: "Date of creation "
+        updated_at: "Date edited"

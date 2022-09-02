@@ -16,11 +16,7 @@
     <% if user_signed_in?%>
       <p><%= project_link%></p>
 
-      <p>
-        <%if current_user.admin?%>
-          <%= link_to 'Space Admin', admin_tests_path%>
-        <%end%>
-      </p>
+      <p> <%= link_to 'Space Admin', admin_tests_path if current_user.admin?%></p>
 
       <p>
         Welcom, <%= current_user.name.capitalize%> Guru. (<%= link_to 'Go out', destroy_user_session_path, method: :delete%>)

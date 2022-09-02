@@ -1,0 +1,42 @@
+ru:
+  activerecord:
+    models:
+      user: "Пользователь"
+      category: "Категория"
+      test: "Тест"
+      question: "Вопрос"
+      answer: "Ответ"
+
+    attributes:
+      user:
+        last_name: "Фамилия"
+        first_name: "Имя"
+        email: "Емайл"
+        type: "Роль"
+        created_at: "Дата создания"
+        updated_at: "Дата редактирования"
+
+      category:
+        title: "Название"
+        created_at: "Дата создания"
+        updated_at: "Дата редактирования"
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+        author_id: "Ключ пользователя"
+        created_at: "Дата создания"
+        updated_at: "Дата редактирования"
+
+      question:
+        body: "Содержание"
+        test_id: "Ключ теста"
+        created_at: "Дата создания"
+        updated_at: "Дата редактирования"
+
+      answer:
+        body: "Содержание"
+        correct: "Правильность ответа"
+        question_id: "Ключ вопроса"
+        created_at: "Дата создания"
+        updated_at: "Дата редактирования"

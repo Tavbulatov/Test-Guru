@@ -1,0 +1,10 @@
+<li>
+  <%= answer.body%><br>
+  <p>
+    <%= link_to t('nav.show'), admin_answer_path(answer)%> ||
+    <%= link_to t('nav.edit'), edit_admin_answer_path(answer)%> ||
+    <%= link_to t('nav.delete'), admin_answer_path(answer),
+                              method: :delete,
+                              data: {confirm:  t('delete.message')}%>
+  </p>
+</li>
