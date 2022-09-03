@@ -11,18 +11,7 @@
   </head>
 
   <body>
-
-
-    <% if user_signed_in?%>
-      <p><%= project_link%></p>
-
-      <p> <%= link_to 'Space Admin', admin_tests_path if current_user.admin?%></p>
-
-      <p>
-        Welcom, <%= current_user.name.capitalize%> Guru. (<%= link_to 'Go out', destroy_user_session_path, method: :delete%>)
-      </p>
-    <%end%>
-
+    <%= render 'shared/nav'%>
     <%= render 'shared/flash'%>
     <%= yield %>
     <%= render 'shared/footer'%>
