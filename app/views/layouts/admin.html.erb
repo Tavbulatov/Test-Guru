@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Admin Panel || TestGuru</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no" >
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <title>TestGuru</title>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,14 +14,18 @@
   </head>
 
   <body>
-    <% if user_signed_in?%>
-      <p>
-        <%= link_to 'Home', admin_tests_path%> ||
-        <%= link_to 'Go out', destroy_user_session_path, method: :delete%>
-      </p>
-    <%end%>
+    <div class="d-grid gap-2 d-md-block">
+      <button class="btn btn-light" type="button"><%= project_link%></button>
+      <button class="btn btn-light" type="button"><%= link_to 'Home', admin_tests_path%></button>
+      <button class="btn btn-light" type="button"><%= link_to 'Go out', destroy_user_session_path, method: :delete%></button>
+    </div>
 
-    <%= render 'shared/flash'%>
-    <%= yield %>
+    <div class="container">
+      <div class="col-12">
+          <%= render 'shared/flash'%>
+          <%= yield %>
+          <%= render 'shared/footer'%>
+      </div>
+    </div>
   </body>
 </html>

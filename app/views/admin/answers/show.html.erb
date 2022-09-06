@@ -2,6 +2,6 @@
 <h2><%= t('.body', body: @answer.body)%></h2>
 
 <p>
-  <%= link_to t('nav.back'), admin_question_path(@answer.question)%> ||
-  <%= link_to t('nav.edit'), edit_admin_answer_path(@answer) %>
+  <%= link_to t('nav.edit'), edit_admin_answer_path(@answer), class: 'btn btn-light' %>
+  <%= link_to t('nav.back'), admin_question_path(@answer.question), class: 'btn btn-light'%>
 </p>

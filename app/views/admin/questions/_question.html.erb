@@ -1,7 +1,7 @@
 <tr>
   <td><li><%= question.body%></li></td>
-  <td><%= link_to t('nav.show'), admin_question_path(question)%> ||</td>
-  <td><%= link_to t('nav.edit'), edit_admin_question_path(question)%> ||</td>
+  <td><%= link_to t('nav.show'), admin_question_path(question)%></td>
+  <td><%= link_to t('nav.edit'), edit_admin_question_path(question)%></td>
   <td><%= link_to t('nav.delete'), admin_question_path(question),
                             method: :delete,
                             data: {confirm: t('delete.message')} %></td>

@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no" >
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <title>TestGuru</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,20 +14,12 @@
   </head>
 
   <body>
+    <%= render 'shared/nav'%>
 
-
-    <% if user_signed_in?%>
-      <p><%= project_link%></p>
-
-      <p> <%= link_to 'Space Admin', admin_tests_path if current_user.admin?%></p>
-
-      <p>
-        Welcom, <%= current_user.name.capitalize%> Guru. (<%= link_to 'Go out', destroy_user_session_path, method: :delete%>)
-      </p>
-    <%end%>
-
-    <%= render 'shared/flash'%>
-    <%= yield %>
-    <%= render 'shared/footer'%>
+    <div class="container">
+      <%= render 'shared/flash'%>
+      <%= yield %>
+      <%= render 'shared/footer'%>
+    </div>
   </body>
 </html>
