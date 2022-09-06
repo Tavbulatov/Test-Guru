@@ -1,11 +1,15 @@
-<h3><%= t('.header')%></h3>
+<div class="container text-center">
+  <div class="row">
+    <h3><%= t('.header')%></h3>
 
-<table>
-  <tr>
-    <th><%= t('.title')%></th>
-    <th><%= t('.number_questions')%></th>
-    <th><%= t('.action')%></th>
-  </tr>
+    <table>
+      <tr>
+        <th><%= t('.title')%></th>
+        <th><%= t('.number_questions')%></th>
+        <th><%= t('.action')%></th>
+      </tr>
 
-  <%= render @tests%>
-</table>
+      <%= render @tests%>
+    </table>
+  </div>
+</div>

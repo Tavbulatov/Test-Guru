@@ -6,4 +6,4 @@
    <p style= "color:red"><%= t('.not_passed', score: @test_passage.percentage_score )%></p>
  <%end%>
 
-<p><%= link_to t('nav.all_tests'), tests_path%></p>
+<button type="button" class="btn btn-light"><%= link_to t('nav.all_tests'), tests_path%></button>

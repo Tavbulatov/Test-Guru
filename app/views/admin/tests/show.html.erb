@@ -1,5 +1,6 @@
 <p><b><%= t('.header', title: @test.title)%></b></p>
-<table>
+
+<table class="table table-striped">
   <tr>
     <th><%= t('.questions')%></th>
     <th colspan = "3"><%= t('.action')%></th>
@@ -8,6 +9,7 @@
   <%= render @test.questions%>
 </table>
 
-<p><%= link_to t('nav.new_question'), new_admin_test_question_path(@test)%>
-
-<p><%= link_to t('nav.back'), admin_tests_path%></p>
+<div class="d-grid gap-2 d-md-block">
+  <button class="btn btn-light" type="button"><%= link_to t('nav.new_question'), new_admin_test_question_path(@test), class: "btn btn-light"%></button>
+  <button class="btn btn-light" type="button"><%= link_to t('nav.back'), admin_tests_path, class: "btn btn-light"%></button>
+</div><br>

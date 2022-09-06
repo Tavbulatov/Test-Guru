@@ -11,6 +11,6 @@
       <%= b.label%>
     </p>
   <%end%>
-  <p><%= form.submit t('.next')%></p>
+  <p><%= form.submit t('.next'), class: 'btn btn-light'%></p>
 <%end%>
-<p><%= link_to t('nav.exit'), tests_path%>
+<p><%= link_to t('nav.exit'), tests_path, class: 'btn btn-light'%>
