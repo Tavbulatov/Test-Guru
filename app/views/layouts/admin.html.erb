@@ -16,9 +16,9 @@
   <body>
     <div class="d-grid gap-2 d-md-block">
       <button class="btn btn-light" type="button"><%= project_link%></button>
-      <button class="btn btn-light" type="button"><%= link_to 'Home', admin_tests_path%></button>
-      <button class="btn btn-light" type="button"><%= link_to 'Go out', destroy_user_session_path, method: :delete%></button>
-      <button class="btn btn-light" type="button"><%= link_to 'Gists', admin_gists_path%></button>
+      <button class="btn btn-light" type="button"><%= link_to t('nav.home'), admin_tests_path%></button>
+      <button class="btn btn-light" type="button"><%= link_to t('nav.go out'), destroy_user_session_path, method: :delete%></button>
+      <button class="btn btn-light" type="button"><%= link_to t('nav.gists'), admin_gists_path%></button>
     </div>
 
     <div class="container">

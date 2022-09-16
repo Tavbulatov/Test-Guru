@@ -38,6 +38,9 @@ ru:
     new_question: "Новый вопрос"
     new_test: "Новый тест"
     gist: "Отправить в гист"
+    home: "Главная"
+    go out: "Выйти из аккаунта"
+    gists: "Гисты"
   tests:
     index:
       header: "Доступные Tесты"
@@ -95,6 +98,12 @@ ru:
         header: "Новый ответ"
       edit:
         header: "Редактирование ответа"
+    gists:
+      index:
+        email: "Эл.почта"
+        question: "Содержание вопроса"
+        url: "Ссылка"
+
 
   tests_mailer:
     completed_test:
