@@ -13,10 +13,10 @@ categories = Category.create!([{ title: 'Математика' },
 
 users = User.all
 
-tests = Test.create!([{ title: 'Сложение', category: categories[0], author: users[1] },
-                      { title: 'Вычитание', level: 1, category: categories[0], author: users[1] },
+tests = Test.create!([{ title: 'Сложение', category: categories[0], author: users[0] },
+                      { title: 'Вычитание', level: 1, category: categories[0], author: users[0] },
                       { title: 'НПВС', category: categories[1], author: users[0] },
-                      { title: 'Противовирусные', level: 1, category: categories[1], author: users[0] }])
+                      { title: 'Противовирусные', level: 2, category: categories[1], author: users[0] }])
 
 questions = Question.create!([{ body: '5 + 7 =', test: tests[0] },
                               { body: '10 + 8 =', test: tests[0] },

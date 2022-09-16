@@ -37,7 +37,7 @@ ru:
     new_answer: "Новый ответ"
     new_question: "Новый вопрос"
     new_test: "Новый тест"
-
+    gist: "Отправить в гист"
   tests:
     index:
       header: "Доступные Tесты"
@@ -63,7 +63,9 @@ ru:
       correct_count: "Количество правильных ответов: %{correct}"
       passed: "Тест успешно пройден: %{score}"
       not_passed: "Тест не пройден: %{score}"
-
+    gist:
+      succes: "Гист успешно создан, вот ссылка: %{url}"
+      failure: "Произошла ошибка"
   admin:
     tests:
       index:
