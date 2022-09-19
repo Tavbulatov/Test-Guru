@@ -68,7 +68,8 @@ en:
       correct_count: "Number of correct answers: %{correct}"
       passed: "Test passed successfully: %{score}"
       not_passed: "Test failed: %{score}"
-    gist:
+  gists:
+    create:
       succes: "Gist successfully created, here is the link: %{url}"
       failure: "An error has occurred"
 

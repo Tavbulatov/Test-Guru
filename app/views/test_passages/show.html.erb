@@ -13,5 +13,5 @@
   <%end%>
   <p><%= form.submit t('.next'), class: 'btn btn-light'%></p>
 <%end%>
-<p><%= link_to t('nav.gist'), gist_test_passage_path(@test_passage), class: 'btn btn-light', method: :post %></p>
+<p><%= link_to t('nav.gist'), test_passage_gists_path(@test_passage), class: 'btn btn-light', method: :post %></p>
 <p><%= link_to t('nav.exit'), tests_path, class: 'btn btn-light'%>
