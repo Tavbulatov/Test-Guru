@@ -4,12 +4,12 @@ class GistsController < ApplicationController
 
     result = GistQuestionService.new(test_passage.current_question).call
 
-    flash = if result.url.nil?
-              { notice: t('.failure') }
+    flash = if result.succes?
+              Gist.create!(user: current_user, question: test_passage.current_question, url: result.html_url)
+              { notice: t('.succes', html_url: view_context.link_to('Gist', result.html_url, target: '_blank', rel: 'noopener')) }
             else
-              Gist.create!(user: current_user, question: test_passage.current_question, url: result.url)
+              { notice: t('.failure') }
 
-              { notice: t('.succes', url: result.url) }
             end
 
     redirect_to test_passage, flash

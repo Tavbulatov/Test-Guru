@@ -6,8 +6,14 @@ class GistQuestionService
     @client = client
   end
 
+  Result = Struct.new(:html_url) do
+    def succes?
+      html_url.present?
+    end
+  end
+
   def call
-    @client.create_gist(gist_params)
+    Result.new(@client.create_gist(gist_params).html_url)
   end
 
   private

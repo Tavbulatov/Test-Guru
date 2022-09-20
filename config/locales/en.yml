@@ -70,7 +70,7 @@ en:
       not_passed: "Test failed: %{score}"
   gists:
     create:
-      succes: "Gist successfully created, here is the link: %{url}"
+      succes: "Gist successfully created, here is the link: %{html_url}"
       failure: "An error has occurred"
 
   admin:

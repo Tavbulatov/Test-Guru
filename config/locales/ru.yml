@@ -68,7 +68,7 @@ ru:
       not_passed: "Тест не пройден: %{score}"
   gists:
     create:
-      succes: "Гист успешно создан, вот ссылка: %{url}"
+      succes: "Гист успешно создан, вот ссылка: %{html_url}"
       failure: "Произошла ошибка"
   admin:
     tests:
