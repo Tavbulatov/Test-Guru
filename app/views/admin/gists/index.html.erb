@@ -1,0 +1,16 @@
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= t('.email')%></th>
+      <th><%= t('.question')%></th>
+      <th><%= t('.url')%></th>
+      <th><%= t('nav.delete')%></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @gists %>
+  </tbody>
+</table>

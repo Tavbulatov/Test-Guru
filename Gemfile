@@ -5,17 +5,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.2'
 
-#Rubocop
-gem 'rubocop', require: false
-gem 'rubocop-performance', '~> 1.14.3', require: false
-gem 'rubocop-rails', '~> 2.15.2', require: false
-
-#Bootstrap
+# Bootstrap
 gem 'bootstrap', '~> 5.2.0'
 gem 'jquery-rails'
 
-gem 'rubocop-lsp'
-gem 'solargraph', group: :development
+# API
+gem 'octokit'
 
 gem 'rails-i18n', '~> 7.0', '>= 7.0.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
@@ -61,6 +56,17 @@ group :development do
   gem 'spring'
 
   gem 'letter_opener' # гем кликает ссылку из лога
+
+  # env - гем для чтения файлов env формата
+  gem 'dotenv-rails'
+
+  gem 'rubocop-lsp'
+  gem 'solargraph'
+
+  # Rubocop
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', '~> 1.14.3', require: false
+  gem 'rubocop-rails', '~> 2.15.2', require: false
 end
 
 group :test do

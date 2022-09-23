@@ -9,7 +9,7 @@ class Test < ApplicationRecord
   belongs_to :author, class_name: 'User'
 
   validates :title, presence: true, uniqueness: true, length: { maximum: 100 }
-  validates :level, uniqueness: true, numericality: { only_integer: true }
+  validates :level, numericality: { only_integer: true }
 
   scope :easy, -> { where(level: 0..1) }
   scope :middle, -> { where(level: 2..4) }

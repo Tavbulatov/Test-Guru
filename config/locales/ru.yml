@@ -37,7 +37,10 @@ ru:
     new_answer: "Новый ответ"
     new_question: "Новый вопрос"
     new_test: "Новый тест"
-
+    gist: "Отправить в гист"
+    home: "Главная"
+    go out: "Выйти из аккаунта"
+    gists: "Гисты"
   tests:
     index:
       header: "Доступные Tесты"
@@ -63,7 +66,10 @@ ru:
       correct_count: "Количество правильных ответов: %{correct}"
       passed: "Тест успешно пройден: %{score}"
       not_passed: "Тест не пройден: %{score}"
-
+  gists:
+    create:
+      succes: "Гист успешно создан, вот ссылка: %{html_url}"
+      failure: "Произошла ошибка"
   admin:
     tests:
       index:
@@ -93,6 +99,12 @@ ru:
         header: "Новый ответ"
       edit:
         header: "Редактирование ответа"
+    gists:
+      index:
+        email: "Эл.почта"
+        question: "Содержание вопроса"
+        url: "Ссылка"
+
 
   tests_mailer:
     completed_test:

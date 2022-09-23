@@ -38,6 +38,10 @@ en:
     new_answer: "New answer"
     new_question: "New question"
     new_test: "New test"
+    gist: "Send to gist"
+    home: "Home"
+    go out: "Go Out"
+    gists: "Gists"
 
   tests:
     index:
@@ -64,6 +68,10 @@ en:
       correct_count: "Number of correct answers: %{correct}"
       passed: "Test passed successfully: %{score}"
       not_passed: "Test failed: %{score}"
+  gists:
+    create:
+      succes: "Gist successfully created, here is the link: %{html_url}"
+      failure: "An error has occurred"
 
   admin:
     tests:
@@ -94,6 +102,12 @@ en:
         header: "New answer"
       edit:
         header: "Editing answer"
+    gists:
+      index:
+        email: "Email"
+        question: "Content of the question"
+        url: "Link"
+
 
   tests_mailer:
     completed_test:
