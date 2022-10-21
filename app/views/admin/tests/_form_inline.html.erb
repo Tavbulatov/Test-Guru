@@ -1,0 +1,7 @@
+<%= form_with model: [:admin, test], url: update_inline_admin_test_path(test), local: true do |form| %>
+  <p>
+  <%= form.label :title %><br>
+  <%= form.text_field :title %>
+  <button class="btn btn-light" type="button"><%= form.submit class: 'btn btn-light' %></button>
+  </p>
+<%end%>

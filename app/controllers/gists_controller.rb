@@ -6,7 +6,8 @@ class GistsController < ApplicationController
 
     flash = if result.succes?
               Gist.create!(user: current_user, question: test_passage.current_question, url: result.html_url)
-              { notice: t('.succes', html_url: view_context.link_to('Gist', result.html_url, target: '_blank', rel: 'noopener')) }
+              { notice: t('.succes',
+                          html_url: view_context.link_to('Gist', result.html_url, target: '_blank', rel: 'noopener')) }
             else
               { notice: t('.failure') }
 

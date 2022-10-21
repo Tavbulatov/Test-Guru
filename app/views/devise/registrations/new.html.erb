@@ -24,16 +24,19 @@
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= octicon 'check', class:'hide' %>
+    <%= octicon 'thumbsdown',class: 'icon-red hide' %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= octicon 'check', class:'hide'%>
+    <%= octicon 'thumbsdown',class: 'icon-red hide' %>
   </div>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
-
 <%= render "devise/shared/links" %>

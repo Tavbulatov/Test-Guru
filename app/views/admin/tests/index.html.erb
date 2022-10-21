@@ -2,6 +2,8 @@
 
 <h3><%= link_to t('nav.new_test'), new_admin_test_path%></h3>
 
+<%= render 'shared/errors', resource: @test%>
+
 <table class="table table-striped">
   <tr>
     <th><%= t('.title')%></th>
