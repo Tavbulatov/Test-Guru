@@ -2,8 +2,8 @@ document.addEventListener('turbolinks:load', () => {
   const form = document.querySelector('form')
   const passwordConfirmation = form.elements.user_password_confirmation
   const password = form.elements.user_password
-  const octiconCheck = document.querySelectorAll('.octicon-check')
-  const octiconThumbsdown = document.querySelectorAll('.octicon-thumbsdown')
+  const octiconCheck = form.querySelectorAll('.octicon-check')
+  const octiconThumbsdown = form.querySelectorAll('.octicon-thumbsdown')
 
   if(passwordConfirmation && password) {
     passwordConfirmation.addEventListener('input',checkPassword)

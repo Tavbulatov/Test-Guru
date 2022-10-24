@@ -26,6 +26,10 @@ class TestPassage < ApplicationRecord
     percentage_score >= SUCCESS_RATIO
   end
 
+  def remaining_questions_summ
+    test.questions.order(:id).where('id > ?', current_question.id).count
+  end
+
   private
 
   def next_question

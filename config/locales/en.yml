@@ -4,7 +4,7 @@ en:
       test:
         create: "Create Test"
         update: "Update Test"
-        question:
+      question:
         create: "Create Question"
         update: "Update Question"
       answer:

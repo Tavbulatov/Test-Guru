@@ -18,7 +18,6 @@ Rails.application.routes.draw do
     resources :gists, only: :create
     member do
       get :result
-      post :gist
     end
   end
 
