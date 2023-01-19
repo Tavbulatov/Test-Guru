@@ -6,8 +6,7 @@ class Admin::TestsController < Admin::BaseController
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  def index
-  end
+  def index; end
 
   def show; end
 
@@ -49,6 +48,7 @@ class Admin::TestsController < Admin::BaseController
   end
 
   private
+
   def set_tests
     @tests = Test.all
   end

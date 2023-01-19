@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }
 
+  resources :feedbacks, only: %i[new create]
+
   resources :tests, only: %i[index show] do
     resources :questions, shallow: true, only: :show do
       resources :answers, shallow: true, only: :show

@@ -19,6 +19,6 @@ module ApplicationHelper
   end
 
   def project_link
-    link_to 'Test Guru', root_path
+    link_to t('nav.test_guru'), root_path
   end
 end

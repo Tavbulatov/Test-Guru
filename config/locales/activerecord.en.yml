@@ -15,6 +15,9 @@ ru:
         type: "Role"
         created_at: "Date of creation "
         updated_at: "Date edited"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        name: "Name"
 
       category:
         title: "Title"
@@ -40,3 +43,5 @@ ru:
         question_id: "Key question"
         created_at: "Date of creation "
         updated_at: "Date edited"
+      feedback:
+        body: "Body"
