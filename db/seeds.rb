@@ -11,12 +11,13 @@
 categories = Category.create!([{ title: 'Математика' },
                                { title: 'Фармакология' }])
 
-users = User.all
+admin = Admin.new(name: 'Alikhan', email: 'alikhantam26@gmail.com', password: 123123,
+                  first_name: 'Alikhan', last_name: 'Tavbulatov')
 
-tests = Test.create!([{ title: 'Сложение', category: categories[0], author: users[0] },
-                      { title: 'Вычитание', level: 1, category: categories[0], author: users[0] },
-                      { title: 'НПВС', category: categories[1], author: users[0] },
-                      { title: 'Противовирусные', level: 2, category: categories[1], author: users[0] }])
+tests = Test.create!([{ title: 'Сложение', category: categories[0], author: admin },
+                      { title: 'Вычитание', level: 1, category: categories[0], author: admin },
+                      { title: 'НПВС', category: categories[1], author: admin },
+                      { title: 'Противовирусные', level: 2, category: categories[1], author: admin }])
 
 questions = Question.create!([{ body: '5 + 7 =', test: tests[0] },
                               { body: '10 + 8 =', test: tests[0] },
