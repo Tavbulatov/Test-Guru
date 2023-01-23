@@ -11,7 +11,7 @@
 categories = Category.create!([{ title: 'Математика' },
                                { title: 'Фармакология' }])
 
-admin = Admin.create!(name: 'Alikhan', email: 'alikhantam26@gmail.com', password: 123123,
+admin = Admin.create!(name: 'Alikhan', email: 'alihantavbulatov@yandex.ru', password: 123123,
                   first_name: 'Alikhan', last_name: 'Tavbulatov')
 
 tests = Test.create!([{ title: 'Сложение', category: categories[0], author: admin },
