@@ -27,12 +27,13 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: 'alikhandb.onrender.com' }
   config.action_mailer.smtp_settings = {
-    address: 'smtp.yandex.ru',
-    port: 587,
-    domain: 'mail.yandex.ru',
-    user_name: ENV.fetch('SMTP_USERNAME', nil),
-    password: ENV.fetch('SMTP_PASSWORD', nil),
-    authentication: 'plain',
+    tls:                  true,
+    address:              'smtp.yandex.ru',
+    port:                 465,
+    domain:               'yandex.ru',
+    user_name:            ENV.fetch('SMTP_USERNAME', nil),
+    password:             ENV.fetch('SMTP_PASSWORD', nil),
+    authentication:       'plain',
     enable_starttls_auto: true
   }
 
