@@ -29,8 +29,8 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     tls:                  true,
     address:              'smtp.yandex.ru',
-    port:                 587,
-    domain:               'yandex.ru',
+    port:                 465,
+    domain:               'mail.yandex.ru',
     user_name:            ENV.fetch('SMTP_USERNAME', nil),
     password:             ENV.fetch('SMTP_PASSWORD', nil),
     authentication:       'plain',
