@@ -81,6 +81,9 @@ ru:
     create:
       succes: "Гист успешно создан, вот ссылка: %{html_url}"
       failure: "Произошла ошибка"
+  feedbacks:
+    create:
+      succes: "Ваше сообщение успешно отправлено"
   admin:
     tests:
       index:

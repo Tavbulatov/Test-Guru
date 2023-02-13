@@ -83,7 +83,9 @@ en:
     create:
       succes: "Gist successfully created, here is the link: %{html_url}"
       failure: "An error has occurred"
-
+  feedbacks:
+    create:
+      succes: "Your message has been sent successfully"
   admin:
     tests:
       index:
