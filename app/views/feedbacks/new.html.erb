@@ -1,3 +1,4 @@
+<%= render "shared/errors", resource: @feedback%>
 <%= form_with model: [@feedback], local: true do |form| %>
   <p>
     <%= form.label :body %><br>

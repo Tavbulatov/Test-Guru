@@ -8,7 +8,7 @@ class FeedbacksController < ApplicationController
                                                      email: current_user.email }))
     if @feedback.save
       FeedbacksMailer.feedback_created(@feedback).deliver_now
-      redirect_to root_path
+      redirect_to root_path, { notice: t('.succes') }
     else
       render :new
     end
