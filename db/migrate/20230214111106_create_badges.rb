@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 class CreateBadges < ActiveRecord::Migration[6.1]
   def change
@@ -7,6 +6,7 @@ class CreateBadges < ActiveRecord::Migration[6.1]
       t.string :url_picture, null: false
       t.string :rule, null: false
       t.string :rule_criterion, null: false
+      t.string :description, null: false
 
       t.timestamps
     end
