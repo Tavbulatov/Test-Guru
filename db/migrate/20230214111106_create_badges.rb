@@ -4,6 +4,7 @@ class CreateBadges < ActiveRecord::Migration[6.1]
       t.string :name, null: false
       t.string :url_picture, null: false
       t.string :rule, null: false
+      t.string :rule_criterion, null: false
 
       t.timestamps
     end

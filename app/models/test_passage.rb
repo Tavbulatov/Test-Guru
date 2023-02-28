@@ -32,7 +32,13 @@ class TestPassage < ApplicationRecord
 
   private
 
+  def test_passed?
+    self.passed = test_passed_successfully?
+  end
+
   def next_question
+    test_passed?
+
     self.current_question = if current_question.nil?
                               test.questions.first
                             else
