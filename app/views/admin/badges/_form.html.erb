@@ -1,0 +1,39 @@
+<p>
+  <p>Бэйдж создается учитывая одно из правил(Выберите номер правила):</p>
+
+ <p>Правило:</p>
+         <p>1) Успешного прохождения всех тестов определённой категории (Напиши название категории в "Критерий правила" )</p>
+         <p>2) Успешного прохождения теста с первой попытки(Оставь дефолтное значение в "Критерий правила")</p>
+         <p>3) Успешного прохождения всех тестов определённого уровня(Напиши число уровня Тестов в "Критерий правила")</p>
+
+  <p>Примечание: Если вы выбрали правило №2 при создании бэйджа пункт "Критерии правила"- роли не играет, поэтому оставьте как есть.</p>
+</p>
+
+<%= render 'shared/errors', resource: @badge%>
+
+<%= form_with model: [:admin, @badge], local: true do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :rule %><br>
+    <%= form.number_field :rule, in: 1..3 %>
+  </p>
+
+  <p>
+    <%= form.label :rule_criterion %><br>
+    <%= form.text_field :rule_criterion , value: "Test"%>
+  </p>
+
+  <p>
+    <%= form.label :url_picture %><br>
+    <%= form.text_field :url_picture %>
+  </p>
+
+  <div class="d-grid gap-2 d-md-block">
+    <button class="btn btn-light" type="button"><%= form.submit class: 'btn btn-light' %></button>
+    <button class="btn btn-light" type="button"><%= link_to t('nav.back'), admin_tests_path, class: 'btn btn-light'%></button>
+  </div><br>
+<%end%>

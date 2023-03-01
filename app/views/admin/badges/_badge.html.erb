@@ -1,0 +1,16 @@
+<tr>
+  <td><%= badge.name%></td>
+  <td><%= badge.rule%></td>
+  <td><%= badge.rule_criterion%></td>
+  <td><%= badge.url_picture%></td>
+  <td class="align-middle">
+    <%= link_to t('nav.edit'),
+                edit_admin_badge_path(badge)%>
+  </td>
+
+  <td class="align-middle"><%= link_to t('nav.delete'),
+                                       admin_badge_path(badge),
+                                       method: :delete,
+                                       data: {confirm: t('delete.message')}%>
+  </td>
+</tr>
