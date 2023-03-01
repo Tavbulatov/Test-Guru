@@ -1,15 +1,13 @@
 # frozen_string_literal: true
 
 class TestsController < ApplicationController
-  before_action :find_test, only: %i[start show]
+  before_action :find_test, only: %i[start]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def index
     @tests = Test.all
   end
-
-  def show; end
 
   def start
     current_user.tests.push(@test)
