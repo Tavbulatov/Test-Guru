@@ -58,3 +58,18 @@ answers = Answer.create!([{ body: '12', correct: true, question: questions[0] },
                           { body: 'Сироп', question: questions[6] },
                           { body: 'Гранулы', question: questions[6] },
                           { body: 'Р-р для В/В', question: questions[6] }])
+
+Badge.create!([{ name: 'Wiseacre',
+                 url_picture: 'https://png.pngtree.com/png-clipart/20230102/big/
+                               pngtree-school-accreditation-logo-badge-png-image_8857284.png',
+                 rule: 1,
+                 rule_criterion: 'Фармакология'},
+               { name: 'First time',
+                 url_picture: 'https://png.pngtree.com/png-clipart/20200710/original/pngtree-school-education-logo-png-image_4136141.jpg',
+                 rule: 2,
+                 rule_criterion: "Test"},
+               { name: 'Level!',
+                 url_picture: 'https://w7.pngwing.com/pngs/332/597/png-transparent-100-quality-badge.png',
+                 rule: 3,
+                 rule_criterion: 1}
+                ])
