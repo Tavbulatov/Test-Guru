@@ -12,6 +12,8 @@ ru:
         update: "Обновить Ответ"
       feedback:
         create: "Отправить"
+      badge:
+        create: "Создать Бэйдж"
 
     label:
       test:
@@ -49,6 +51,18 @@ ru:
     log_in: "Авторизоваться"
     sing_up: "Регистрация"
     test_guru: "Тест Гуру"
+    badges: "Мои бейджи"
+    create_badge: "Создать бейдж"
+    existing_badges: "Существующие бэйджи"
+  badges:
+    badge:
+      picture: "Картинка"
+      name: "Название"
+      rule: "Номер правилы"
+      rule_criterion: "Критерий правила"
+      badges_handed: "Вам врученные Бэйджи"
+      existing_badges: "Существующие бейджи"
+
   tests:
     index:
       header: "Доступные Tесты"

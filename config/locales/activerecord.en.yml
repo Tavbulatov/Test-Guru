@@ -45,3 +45,8 @@ ru:
         updated_at: "Date edited"
       feedback:
         body: "Body"
+      badge:
+        name: "Name"
+        url_picture: "Url picture"
+        rule: "Rule number"
+        rule_criterion: "Rule criteria"

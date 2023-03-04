@@ -10,6 +10,7 @@
         <li><a class="dropdown-item"><%= link_to t('nav.go_out'), destroy_user_session_path, method: :delete%></a></li>
         <%if current_user.admin?%>
           <li><a class="dropdown-item"><%= link_to t('nav.space_admin'), admin_tests_path%></a></li>
+          <li><a class="dropdown-item"><%= link_to t('nav.badges'), badges_path%></a></li>
         <%end%>
       </ul>
     </div>

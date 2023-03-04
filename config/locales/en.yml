@@ -12,6 +12,8 @@ en:
         update: "Update Answer"
       feedback:
         create: "Send"
+      badge:
+        create: "Create Badge"
 
     label:
       test:
@@ -50,6 +52,19 @@ en:
     log_in: "Log in"
     sing_up: "Sing up"
     test_guru: "Test Guru"
+    badges: "My badges"
+    create_badge: "Create badge"
+    existing_badges: "Existing badges"
+
+  badges:
+    badge:
+      picture: "Picture"
+      name: "Name"
+      rule: "Rule number"
+      rule_criterion: "Rule criteria"
+      badges_handed: "Badges handed to you"
+      existing_badges: "Existing badges"
+
 
   tests:
     index:

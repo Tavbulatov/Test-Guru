@@ -2,7 +2,8 @@
   <td><%= badge.name%></td>
   <td><%= badge.rule%></td>
   <td><%= badge.rule_criterion%></td>
-  <td><%= badge.url_picture%></td>
+  <td><%=link_to t('badges.badge.picture'), badge.url_picture, target: "blank"%></td>
+
   <td class="align-middle">
     <%= link_to t('nav.edit'),
                 edit_admin_badge_path(badge)%>
