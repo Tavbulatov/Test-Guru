@@ -8,9 +8,11 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_current_question
+  before_validation :before_validation_time_over?
+  before_validation :before_validation_test_passed?
 
   def completed?
-    current_question.nil?
+    current_question.nil? || time_over?
   end
 
   def accept!(answer_ids)
@@ -32,13 +34,15 @@ class TestPassage < ApplicationRecord
 
   private
 
+  def time_over?
+    (Time.now - self.created_at) / 60 >= test.time
+  end
+
   def test_passed?
     self.passed = test_passed_successfully?
   end
 
   def next_question
-    test_passed?
-
     self.current_question = if current_question.nil?
                               test.questions.first
                             else
@@ -52,6 +56,14 @@ class TestPassage < ApplicationRecord
 
   def correct_answers
     current_question.answers.correct
+  end
+
+  def before_validation_test_passed?
+    test_passed?
+  end
+
+  def before_validation_time_over?
+    time_over?
   end
 
   def before_validation_set_current_question
