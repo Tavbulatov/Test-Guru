@@ -10,6 +10,8 @@ ru:
       answer:
         create: "Создать Ответ"
         update: "Обновить Ответ"
+      feedback:
+        create: "Отправить"
 
     label:
       test:
@@ -20,6 +22,8 @@ ru:
         body: "Содержание"
       answer:
         body: "Содержание"
+      user:
+        remember_me: "Запомнить меня"
     select:
       prompt: "Выберите категорию"
 
@@ -39,8 +43,12 @@ ru:
     new_test: "Новый тест"
     gist: "Отправить в гист"
     home: "Главная"
-    go out: "Выйти из аккаунта"
+    go_out: "Выйти"
     gists: "Гисты"
+    space_admin: "Админ"
+    log_in: "Авторизоваться"
+    sing_up: "Регистрация"
+    test_guru: "Тест Гуру"
   tests:
     index:
       header: "Доступные Tесты"
@@ -54,6 +62,9 @@ ru:
       year: "Год"
       navigation: "Учебный проект в онлайн-школе Thinknetica"
       repo: "Репозиторий"
+      feedback: "Обратная связь"
+    nav:
+      welcom: "Добро пожаловать"
 
   test_passages:
     show:
@@ -70,6 +81,9 @@ ru:
     create:
       succes: "Гист успешно создан, вот ссылка: %{html_url}"
       failure: "Произошла ошибка"
+  feedbacks:
+    create:
+      succes: "Ваше сообщение успешно отправлено"
   admin:
     tests:
       index:

@@ -1,0 +1,11 @@
+<%= render "shared/errors", resource: @feedback%>
+<%= form_with model: [@feedback], local: true do |form| %>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body, size: "70x10" %>
+  </p>
+
+  <div class="d-grid gap-2 d-md-block">
+    <button class="btn btn-light" type="button"><%= form.submit class: 'btn btn-light' %></button>
+  </div><br>
+<%end%>

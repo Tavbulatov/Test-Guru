@@ -2,6 +2,9 @@
   <p>
     <%= t('.author')%>: Alikhan ||
     <%= t('.year')%>: <%= current_year%> ||
+    <%= link_to t('.feedback'), new_feedback_path%>
+    </p>
+    <p>
     Github: <%= github_url('Tavbulatov', 'test-guru')%> ||
     <%= link_to t('.navigation'), "https://thinknetica.com", target: "_blank"%>
     </p>

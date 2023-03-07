@@ -15,6 +15,9 @@ ru:
         type: "Роль"
         created_at: "Дата создания"
         updated_at: "Дата редактирования"
+        password: "Пароль"
+        password_confirmation: "Пароль подтверждения"
+        name: "Имя"
 
       category:
         title: "Название"
@@ -40,3 +43,5 @@ ru:
         question_id: "Ключ вопроса"
         created_at: "Дата создания"
         updated_at: "Дата редактирования"
+      feedback:
+        body: "Сообщение"

@@ -10,6 +10,8 @@ en:
       answer:
         create: "Create Answer"
         update: "Update Answer"
+      feedback:
+        create: "Send"
 
     label:
       test:
@@ -20,6 +22,8 @@ en:
         body: "Body"
       answer:
         body: "Body"
+      user:
+        remember_me: "Remember me"
 
     select:
       prompt: "Please select"
@@ -40,8 +44,12 @@ en:
     new_test: "New test"
     gist: "Send to gist"
     home: "Home"
-    go out: "Go Out"
+    go_out: "Go Out"
     gists: "Gists"
+    space_admin: "Admin"
+    log_in: "Log in"
+    sing_up: "Sing up"
+    test_guru: "Test Guru"
 
   tests:
     index:
@@ -56,6 +64,9 @@ en:
       year: "Year"
       navigation: "Educational project in an online school Thinknetica"
       repo: "Repository"
+      feedback: "Feedback"
+    nav:
+      welcom: "Welcom"
 
   test_passages:
     show:
@@ -72,7 +83,9 @@ en:
     create:
       succes: "Gist successfully created, here is the link: %{html_url}"
       failure: "An error has occurred"
-
+  feedbacks:
+    create:
+      succes: "Your message has been sent successfully"
   admin:
     tests:
       index:

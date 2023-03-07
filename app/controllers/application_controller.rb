@@ -7,6 +7,10 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def after_sign_in_path_for(_user)
+    current_user.admin? ? admin_tests_path : root_path
+  end
+
   def set_locale
     I18n.locale = I18n.locale_available?(params[:lang]) ? params[:lang] : I18n.default_locale
   end
@@ -16,6 +20,6 @@ class ApplicationController < ActionController::Base
   end
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name first_name])
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name last_name])
   end
 end

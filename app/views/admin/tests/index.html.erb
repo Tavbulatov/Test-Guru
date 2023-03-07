@@ -4,9 +4,13 @@
 
 <%= render 'shared/errors', resource: @test%>
 
-<table class="table table-striped">
+<table class="table">
   <tr>
-    <th><%= t('.title')%></th>
+    <th class="sort-by-title pointer">
+      <%= t('.title')%>
+      <%= octicon 'arrow-up', class: 'text-succes hide'%>
+      <%= octicon 'arrow-down', class: 'text-succes hide'%>
+    </th>
     <th><%= t('.number_questions')%></th>
     <th colspan="3"><%= t('.action')%></th>
   </tr>
