@@ -33,7 +33,7 @@ class TestPassage < ApplicationRecord
   end
 
   def expiring_time
-    (created_at + test.time.minutes + 1.minutes - Time.now).to_i / 60
+    (created_at + test.time.minutes + 1.minute - Time.now).to_i / 60
   end
 
   private

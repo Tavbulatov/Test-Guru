@@ -27,13 +27,13 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: 'alikhandb.onrender.com' }
   config.action_mailer.smtp_settings = {
-    tls:                  true,
-    address:              'smtp.yandex.ru',
-    port:                 465,
-    domain:               'mail.yandex.ru',
-    user_name:            ENV.fetch('SMTP_USERNAME', nil),
-    password:             ENV.fetch('SMTP_PASSWORD', nil),
-    authentication:       'plain',
+    tls: true,
+    address: 'smtp.yandex.ru',
+    port: 465,
+    domain: 'mail.yandex.ru',
+    user_name: ENV.fetch('SMTP_USERNAME', nil),
+    password: ENV.fetch('SMTP_PASSWORD', nil),
+    authentication: 'plain',
     enable_starttls_auto: true
   }
 
@@ -99,7 +99,7 @@ Rails.application.configure do
   config.active_support.disallowed_deprecation_warnings = []
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
-  config.log_formatter = ::Logger::Formatter.new
+  config.log_formatter = Logger::Formatter.new
 
   # Use a different logger for distributed setups.
   # require "syslog/logger"
