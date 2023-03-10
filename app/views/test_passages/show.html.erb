@@ -7,6 +7,11 @@
                           remaining_questions_summ: @test_passage.remaining_questions_summ },
                   id: 'progress-bar'%>
 </div>
+
+<div class='test_passage'>
+  <%=content_tag :div, '', style: '', data: { time: @test_passage.expiring_time }, id: 'timer'%>
+</div>
+
 <p><%= t('.count_questions', quantity: @test_passage.test.questions.count)%><p>
 <p> <%=t('.number_question', question: @test_passage.current_question.id)%><p>
 <p><%= @test_passage.current_question.body%></p>
