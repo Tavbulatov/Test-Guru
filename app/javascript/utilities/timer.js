@@ -1,33 +1,29 @@
 document.addEventListener('turbolinks:load', () => {
   let testPassagePage = document.querySelector(".test_passage")
 
+  if(!testPassagePage) {
+    sessionStorage.seconds = 60
+  }
+
+
   if(testPassagePage) {
     let timer = document.getElementById('timer')
-    let testTime = 0 //timer.dataset.time
-    let currentQuestionFirst = timer.dataset.currentQuestionFirst
-    console.log(currentQuestionFirst)
-    let seconds
+    let testTime = timer.dataset.time
+    let seconds = sessionStorage.seconds
 
-    if(currentQuestionFirst) {seconds = 60}
+    setTimeout(() => {
+      alert('Ваше время истекло')
+      document.querySelector('form').submit()
+    }, (testTime * 60) * 1000 )
 
-    if(timer) {
-      seconds = sessionStorage.seconds
-      seconds ||= 60
-      setInterval(() => {
-        seconds --
-        if(seconds <= 0) {
-          seconds = 60
+    setInterval(() => {
+      seconds --
 
-          if(testTime == 0) {
-            sessionStorage.seconds = 60
-            return  document.querySelector('form').submit()
+      if(seconds == 0) {seconds = 60; testTime -- }
 
-          }
-        }
-        timer.innerHTML = `${testTime}:${seconds}`
-        sessionStorage.setItem('seconds',seconds)
-        console.log( sessionStorage.seconds)
-      }, 1000)
-    }
+      timer.innerHTML = `${testTime - 1}:${seconds}`
+      sessionStorage.setItem('seconds',seconds)
+      console.log( sessionStorage.seconds)
+    }, 1000)
   }
 })
