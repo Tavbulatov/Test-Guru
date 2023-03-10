@@ -1,5 +1,4 @@
 class Admin::BadgesController < Admin::BaseController
-
   before_action :set_badge, only: %i[edit update destroy]
 
   def new
@@ -40,6 +39,6 @@ class Admin::BadgesController < Admin::BaseController
   end
 
   def badge_params
-    params.require(:badge).permit(:name, :rule, :url_picture, :rule_criterion)
+    params.require(:badge).permit(:name, :rule, :url_picture, :rule_criterion, :description)
   end
 end
