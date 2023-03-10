@@ -48,5 +48,6 @@ ru:
       badge:
         name: "Название"
         url_picture: "Адрес картинки"
-        rule: "Номер правилы"
-        rule_criterion: "Критерий правила"
+        rule: "Условие"
+        rule_criterion: "Критерий"
+        description: "Описание правила"

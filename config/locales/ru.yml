@@ -58,10 +58,11 @@ ru:
     badge:
       picture: "Картинка"
       name: "Название"
-      rule: "Номер правилы"
-      rule_criterion: "Критерий правила"
+      rule: "Условие"
+      rule_criterion: "Критерий"
       badges_handed: "Вам врученные Бэйджи"
       existing_badges: "Существующие бейджи"
+      description: "Описание правила"
 
   tests:
     index:

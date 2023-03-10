@@ -60,11 +60,11 @@ en:
     badge:
       picture: "Picture"
       name: "Name"
-      rule: "Rule number"
-      rule_criterion: "Rule criteria"
+      rule: "Condition"
+      rule_criterion: "Criteria"
       badges_handed: "Badges handed to you"
       existing_badges: "Existing badges"
-
+      description: "Rule Description"
 
   tests:
     index:
