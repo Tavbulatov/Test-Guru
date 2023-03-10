@@ -3,6 +3,6 @@ class Badge < ApplicationRecord
 
   validates :name, presence: true
   validates :rule, presence: true
-  validates :rule_criterion , presence: true
+  validates :rule_criterion, presence: true
   validates :url_picture, presence: true
 end
