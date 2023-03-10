@@ -62,14 +62,17 @@ answers = Answer.create!([{ body: '12', correct: true, question: questions[0] },
 Badge.create!([{ name: 'Wiseacre',
                  url_picture: 'https://png.pngtree.com/png-clipart/20230102/big/
                                pngtree-school-accreditation-logo-badge-png-image_8857284.png',
-                 rule: 1,
-                 rule_criterion: 'Фармакология'},
+                 rule: :category ,
+                 rule_criterion: 'Фармакология',
+                 description: 'Все тесты определенной категории'},
                { name: 'First time',
                  url_picture: 'https://png.pngtree.com/png-clipart/20200710/original/pngtree-school-education-logo-png-image_4136141.jpg',
-                 rule: 2,
-                 rule_criterion: "Test"},
+                 rule: :attemp,
+                 rule_criterion: 1,
+                 description: 'Пройти тест с первого раза'},
                { name: 'Level!',
                  url_picture: 'https://w7.pngwing.com/pngs/332/597/png-transparent-100-quality-badge.png',
-                 rule: 3,
-                 rule_criterion: 1}
+                 rule: :level,
+                 rule_criterion: 1,
+                 description: 'Все тесты одного уровня'}
                 ])
