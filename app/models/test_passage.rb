@@ -30,7 +30,15 @@ class TestPassage < ApplicationRecord
     test.questions.order(:id).where('id > ?', current_question.id).count
   end
 
+  def expiring_time
+    (created_at + test.time.minutes + 1.minutes - Time.now).to_i / 60
+  end
+
   private
+
+  def time_over?
+    (Time.now - created_at) / 60 >= test.time if created_at
+  end
 
   def test_passed?
     self.passed = test_passed_successfully?
