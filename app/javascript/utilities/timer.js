@@ -23,7 +23,6 @@ document.addEventListener('turbolinks:load', () => {
 
       timer.innerHTML = `${testTime - 1}:${seconds}`
       sessionStorage.setItem('seconds',seconds)
-      console.log( sessionStorage.seconds)
     }, 1000)
   }
 })
