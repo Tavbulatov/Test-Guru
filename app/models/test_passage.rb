@@ -8,15 +8,14 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_current_question
-  before_validation :before_validation_time_over?
-  before_validation :before_validation_test_passed?
 
   def completed?
-    current_question.nil? || time_over?
+    time_over? || current_question.nil?
   end
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
+    test_passed?
     save!
   end
 
