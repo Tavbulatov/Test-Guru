@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module BadgeRules
   class AllTestsCategory
     # if all tests of a certain category are passed

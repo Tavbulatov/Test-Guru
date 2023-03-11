@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BadgeOptionsDeliveryService
   RULE_CLASSES_TITLE = { attemp: BadgeRules::FirstAttemptTestPass,
                          level: BadgeRules::AllLevelTests,

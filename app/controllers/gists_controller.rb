@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class GistsController < ApplicationController
   def create
     test_passage = TestPassage.find(params[:test_passage_id])
