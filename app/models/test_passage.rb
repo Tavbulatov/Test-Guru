@@ -37,7 +37,7 @@ class TestPassage < ApplicationRecord
   #private
 
   def time_over?
-    (Time.now - created_at) / 60 >= test.time if created_at
+    (Time.now - created_at) / 60 >= test.time
   end
 
   def next_question
