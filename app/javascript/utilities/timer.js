@@ -1,12 +1,13 @@
 document.addEventListener('turbolinks:load', () => {
   let testPassagePage = document.querySelector(".test_passage")
 
-  if(!testPassagePage) {
+  if(localStorage.timerUrl !== location.href) {
     sessionStorage.seconds = 60
   }
 
-
   if(testPassagePage) {
+    localStorage.timerUrl = location.href
+
     let timer = document.getElementById('timer')
     let testTime = timer.dataset.time
     let seconds = sessionStorage.seconds
