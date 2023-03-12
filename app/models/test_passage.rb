@@ -34,7 +34,7 @@ class TestPassage < ApplicationRecord
     (created_at + test.time.minutes + 1.minute - Time.now).to_i / 60
   end
 
-  private
+  #private
 
   def time_over?
     (Time.now - created_at) / 60 >= test.time if created_at
@@ -54,14 +54,6 @@ class TestPassage < ApplicationRecord
 
   def correct_answers
     current_question.answers.correct
-  end
-
-  def before_validation_test_passed?
-    test_passed?
-  end
-
-  def before_validation_time_over?
-    time_over?
   end
 
   def before_validation_set_current_question
