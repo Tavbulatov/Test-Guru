@@ -11,8 +11,8 @@
 categories = Category.create!([{ title: 'Математика' },
                                { title: 'Фармакология' }])
 
-admin = Admin.create!(name: 'Alikhan', email: 'alihantavbulatov@yandex.ru', password: 123123,
-                  first_name: 'Alikhan', last_name: 'Tavbulatov')
+admin = Admin.create!(name: 'Alikhan', email: 'alihantavbulatov@yandex.ru', password: 123_123,
+                      first_name: 'Alikhan', last_name: 'Tavbulatov')
 
 tests = Test.create!([{ title: 'Сложение', category: categories[0], author: admin },
                       { title: 'Вычитание', level: 1, category: categories[0], author: admin },
@@ -58,3 +58,20 @@ answers = Answer.create!([{ body: '12', correct: true, question: questions[0] },
                           { body: 'Сироп', question: questions[6] },
                           { body: 'Гранулы', question: questions[6] },
                           { body: 'Р-р для В/В', question: questions[6] }])
+
+Badge.create!([{ name: 'Wiseacre',
+                 url_picture: 'https://png.pngtree.com/png-clipart/20230102/big/
+                               pngtree-school-accreditation-logo-badge-png-image_8857284.png',
+                 rule: :category,
+                 rule_criterion: 'Фармакология',
+                 description: 'Все тесты определенной категории' },
+               { name: 'First time',
+                 url_picture: 'https://png.pngtree.com/png-clipart/20200710/original/pngtree-school-education-logo-png-image_4136141.jpg',
+                 rule: :attemp,
+                 rule_criterion: 1,
+                 description: 'Пройти тест с первого раза' },
+               { name: 'Level!',
+                 url_picture: 'https://w7.pngwing.com/pngs/332/597/png-transparent-100-quality-badge.png',
+                 rule: :level,
+                 rule_criterion: 1,
+                 description: 'Все тесты одного уровня' }])

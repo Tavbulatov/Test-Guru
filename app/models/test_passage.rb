@@ -15,6 +15,7 @@ class TestPassage < ApplicationRecord
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
+    test_passed?
     save!
   end
 
@@ -38,6 +39,10 @@ class TestPassage < ApplicationRecord
 
   def time_over?
     (Time.now - created_at) / 60 >= test.time
+  end
+
+  def test_passed?
+    self.passed = test_passed_successfully?
   end
 
   def next_question

@@ -20,6 +20,7 @@
     <%= form.label :category_id %>
     <%= form.collection_select :category_id, Category.all,:id, :title, prompt: true %>
   <p>
+
   <div class="d-grid gap-2 d-md-block">
     <button class="btn btn-light" type="button"><%= form.submit class: 'btn btn-light' %></button>
     <button class="btn btn-light" type="button"><%= link_to t('nav.back'), admin_tests_path, class: 'btn btn-light'%></button>

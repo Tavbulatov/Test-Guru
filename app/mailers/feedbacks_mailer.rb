@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class FeedbacksMailer < ApplicationMailer
   def feedback_created(feedback)
     @feedback = feedback

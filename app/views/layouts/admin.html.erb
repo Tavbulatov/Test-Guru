@@ -19,6 +19,8 @@
       <button class="btn btn-light" type="button"><%= link_to t('nav.home'), admin_tests_path%></button>
       <button class="btn btn-light" type="button"><%= link_to t('nav.go_out'), destroy_user_session_path, method: :delete%></button>
       <button class="btn btn-light" type="button"><%= link_to t('nav.gists'), admin_gists_path%></button>
+      <button class="btn btn-light" type="button"><%= link_to t('nav.create_badge'), new_admin_badge_path%></button>
+      <button class="btn btn-light" type="button"><%= link_to t('nav.existing_badges'), admin_badges_path%></button>
     </div>
 
     <div class="container">

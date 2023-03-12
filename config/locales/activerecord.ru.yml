@@ -45,3 +45,9 @@ ru:
         updated_at: "Дата редактирования"
       feedback:
         body: "Сообщение"
+      badge:
+        name: "Название"
+        url_picture: "Адрес картинки"
+        rule: "Условие"
+        rule_criterion: "Критерий"
+        description: "Описание правила"
