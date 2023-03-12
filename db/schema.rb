@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2023_03_04_093724) do
     t.string "url_picture", null: false
     t.string "rule", null: false
     t.string "rule_criterion", null: false
+    t.string "description", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

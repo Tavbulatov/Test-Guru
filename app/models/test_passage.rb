@@ -10,7 +10,7 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_current_question
 
   def completed?
-    current_question.nil?
+    time_over? || current_question.nil?
   end
 
   def accept!(answer_ids)
@@ -31,7 +31,15 @@ class TestPassage < ApplicationRecord
     test.questions.order(:id).where('id > ?', current_question.id).count
   end
 
-  private
+  def expiring_time
+    (created_at + test.time.minutes + 1.minute - Time.now).to_i / 60
+  end
+
+  #private
+
+  def time_over?
+    (Time.now - created_at) / 60 >= test.time
+  end
 
   def test_passed?
     self.passed = test_passed_successfully?
