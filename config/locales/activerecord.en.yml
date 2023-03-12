@@ -30,6 +30,7 @@ ru:
         author_id: "Key user"
         created_at: "Date of creation "
         updated_at: "Date edited"
+        time: "Time"
 
       question:
         body: "Body"

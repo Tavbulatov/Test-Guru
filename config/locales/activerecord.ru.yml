@@ -30,6 +30,7 @@ ru:
         author_id: "Ключ пользователя"
         created_at: "Дата создания"
         updated_at: "Дата редактирования"
+        time: "Время"
 
       question:
         body: "Содержание"
