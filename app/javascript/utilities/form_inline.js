@@ -20,14 +20,12 @@ function formInLineLinkHandler(event) {
 
   let testId = this.dataset.testId
   formInLineHandler(testId)
-  console.log(testId)
 }
 
 function formInLineHandler(testId) {
   let link = document.querySelector('.form-inline-link[data-test-id="' + testId + '"]')
   let testTitle = document.querySelector('.title-test[data-test-id="' + testId +'"]')
   let formInLine = document.querySelector('.form-inline[data-test-id="' + testId + '"]')
-console.log(testTitle)
   if (formInLine.classList.contains('hide')) {
     formInLine.classList.remove('hide')
     testTitle.classList.add('hide')
