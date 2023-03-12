@@ -2,18 +2,23 @@
 
 <%= form_with model: [:admin, @test], local: true do |form| %>
   <p>
-  <%= form.label :title %><br>
-  <%= form.text_field :title %>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
   </p>
 
   <p>
-  <%= form.label :level %><br>
-  <%= form.number_field :level %>
+    <%= form.label :level %><br>
+    <%= form.number_field :level %>
   </p>
 
   <p>
-  <%= form.label :category_id %>
-  <%= form.collection_select :category_id, Category.all,:id, :title, prompt: true %>
+    <%= form.label :time %><br>
+    <%= form.number_field :time %>
+  </p>
+
+  <p>
+    <%= form.label :category_id %>
+    <%= form.collection_select :category_id, Category.all,:id, :title, prompt: true %>
   <p>
   <div class="d-grid gap-2 d-md-block">
     <button class="btn btn-light" type="button"><%= form.submit class: 'btn btn-light' %></button>
