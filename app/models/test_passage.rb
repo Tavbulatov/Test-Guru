@@ -35,7 +35,7 @@ class TestPassage < ApplicationRecord
     (created_at + test.time.minutes + 1.minute - Time.now).to_i / 60
   end
 
-  #private
+  private
 
   def time_over?
     (Time.now - created_at) / 60 >= test.time
